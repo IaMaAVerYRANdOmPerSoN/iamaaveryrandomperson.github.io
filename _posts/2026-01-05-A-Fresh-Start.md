@@ -1,7 +1,6 @@
 ---
-layout: posts
-title: "Blog"
-permalink: /blog
+layout: post
+title: "A Fresh Start"
 ---
 
 # Hello
