@@ -2,6 +2,8 @@
 layout: post
 title: "A Fresh Start"
 categories: [meta, milestones]
+tags: [meta, milestones]
+author: "Apostla"
 ---
 
 # Hello, I'm Apostla/Mxsail/IaMaAVerYRANdOmPerSoN!
