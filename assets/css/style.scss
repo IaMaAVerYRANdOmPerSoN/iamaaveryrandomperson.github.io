@@ -58,3 +58,21 @@ section {
         width: 65%;
     }
 }
+
+pre.highlight {
+    background-color: #1f1f1f;
+    border: none;
+    .nt { color: #569cd6 !important; }
+    .nl { color: #9cdcfe !important; }
+    .mh, .m, .mi { color: #b5cea8 !important; }
+    .s2, .s { color: #ce9178 !important; }
+    .o, .p { color: #d4d4d4 !important; }
+    .nb { color: #dcdcaa !important; }
+    .no { color: #4ec9b0 !important; }
+    .k { color: #d190ff !important; }
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
