@@ -8,11 +8,11 @@ author: "Apostla"
 
 I began adding my own HMTL/CSS today. You're viewing my crude work through the DevTools `inspector-stylesheet` right now, though I should probably explain the (minor) changes in layman's terms:
 
->1. I changed the background color from #fffff to #28282f.  
->2. First-order headings are now #fffff.
->3. Paragraphs are now light grey.  
->4. Link behavior has been updated; Inline code has been restyled.  
->5. The sidebar and body have been compacted (With mobile support)
+1. I changed the background color from #fffff to #28282f.  
+2. First-order headings are now #fffff.
+3. Paragraphs are now light grey.  
+4. Link behavior has been updated; Inline and multi-line code has been restyled.  
+5. The sidebar and body have been compacted (With mobile support)
 
 ... And (Not Much) More! Here's the updated `style.scss` for reference:
 
@@ -76,5 +76,23 @@ section {
     @media (min-width: 960px) {
         width: 65%;
     }
+}
+
+pre.highlight {
+    background-color: #1f1f1f;
+    border: none;
+    .nt { color: #569cd6 !important; }
+    .nl { color: #9cdcfe !important; }
+    .mh, .m, .mi { color: #b5cea8 !important; }
+    .s2, .s { color: #ce9178 !important; }
+    .o, .p { color: #d4d4d4 !important; }
+    .nb { color: #dcdcaa !important; }
+    .no { color: #4ec9b0 !important; }
+    .k { color: #d190ff !important; }
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
 }
 ```
