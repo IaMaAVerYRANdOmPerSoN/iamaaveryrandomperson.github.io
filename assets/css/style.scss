@@ -10,7 +10,7 @@ body {
     background-color: #28282f;
 }
 
-h1 {
+h1, h2, h3 {
     color: white;
 }
 
@@ -75,7 +75,7 @@ pre.highlight {
     background-color: #1f1f1f;
     border: none;
     border-radius: 12px;
-    .nt { color: #569cd6 !important; }
+    .nt, .nn{ color: #569cd6 !important; }
     .nl { color: #9cdcfe !important; }
     .mh, .m, .mi { color: #b5cea8 !important; }
     .s2, .s { color: #ce9178 !important; }
@@ -137,4 +137,10 @@ pre code {
 #Top-button:active {
     background-color: #0f0f0f;
     border: 1px solid #3a3a3a;
+}
+
+
+#index {
+    font-weight: bold;
+    list-style-type: none;
 }
