@@ -10,7 +10,7 @@ body {
     background-color: #28282f;
 }
 
-h1, h2, h3 {
+h1 {
     color: white;
 }
 
@@ -75,7 +75,7 @@ pre.highlight {
     background-color: #1f1f1f;
     border: none;
     border-radius: 12px;
-    .nt, .nn{ color: #569cd6 !important; }
+    .nt { color: #569cd6 !important; }
     .nl { color: #9cdcfe !important; }
     .mh, .m, .mi { color: #b5cea8 !important; }
     .s2, .s { color: #ce9178 !important; }
@@ -116,15 +116,15 @@ pre code {
     padding: 8px;
     position: fixed;
     bottom: 10px;
-    left: 60%;
+    left: calc(50% + + 257.79px);
     background-color: #000000;
     border-radius: 32px;
     border: 1px solid #1f1f1f;
     transition: all 0.2s ease;
     z-index: 10;
 
-    @media (max-width: 960px) {
-        left: 45%;
+    @media (max-width: 900px) {
+        left: 50%;
     }
 }
 
@@ -139,8 +139,78 @@ pre code {
     border: 1px solid #3a3a3a;
 }
 
+#posts-list {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#posts-list li {
+    position: relative;
+    padding: 24px;
+    margin-bottom: 12px;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    list-style-type: none;
+    transition: all 0.2s ease;
+}
+
+#posts-list li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5fff5f;
+}
+
+#posts-list li span {
+    position: absolute;
+    right: 16px;
+   
+    @media (max-width: 400px) {
+        position: unset;
+        font-size: small;
+    }
+}
+
+#posts-list li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+#posts-list li:hover {
+    background-color: #252525;
+    cursor: pointer;
+    padding: 23px
+}
+
+#posts-list li:hover a {
+    text-decoration: underline;
+    color: aquamarine;
+    font-size: 16px;
+}
+
+#posts-list li a:hover {
+    background-color: transparent;
+}
 
 #index {
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    padding-left: 0;
+    gap: 10px;
+    top: 8px;
     font-weight: bold;
     list-style-type: none;
+}
+
+#index li a {
+    color: #267cb9;
 }
