@@ -1,4 +1,25 @@
 ---
+layout: post
+title: "Additional Seasoning"
+categories: "Site Updates"
+tags: "Site Updates"
+author: "Apostla"
+---
+
+I've completed the HTML/CSS for the `post` layout for the most part, though I'm still building off the `minimal` Jekyll theme. I've added several new features this update:
+
+- Global smooth scrolling
+- Corrected list coloring and multi-line code block artifacts
+- Enhanced contrast for some text elements and multi-line code blocks
+- Custom scrollbar
+- A global, scriptless "To Top" button, which will be enhanced later
+
+I'm going to stylize those bare index pages next and start showcasing some big projects! Hang tight!
+
+Oh, and as always, here's the updated code:
+
+```scss
+---
 ---
 @import "jekyll-theme-minimal";
 
@@ -138,3 +159,4 @@ pre code {
     background-color: #0f0f0f;
     border: 1px solid #3a3a3a;
 }
+```
