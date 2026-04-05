@@ -1,0 +1,5 @@
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QAt this point I did not have a registered domain, so I was randomly assigned a .trycloudflare.com subdomain.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QI'm very pleased with Mapbox's free tier, intending to use more of their APIs and SDKs in the future, such as the navigation SDK for turn-by-turn directions and the isochrone API for calculating travel times and distances.\\E$"}
+{"rule":"EN_A_VS_AN","sentence":"^\\QThe implementation was straightforward, I created a renderer.py file in my main app, which renders markdown with a LRU cache and sanitizes the output with ammonia to prevent XSS attacks.\\E$"}
+{"rule":"EN_A_VS_AN","sentence":"^\\QA uh... \"distributed\" logging strategy is not optional once bugs have cascaded between services.\\E$"}
+{"rule":"GONNA","sentence":"^\\QDeployed: ServiceMap (Currently Hosted on a single Google Cloud VM instance, please no DoS attacks, Cloudflare only really mitigates DDoS attacks and bot-like traffic, so if a script kiddie opens console and spams requests, my server is gonna go down, so please don't do that, thanks!)\\E$"}

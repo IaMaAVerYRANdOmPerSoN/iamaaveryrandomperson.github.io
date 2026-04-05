@@ -2,77 +2,76 @@
 ---
 @import "jekyll-theme-minimal";
 
+:root {
+    --bg-main: #28282f;
+    --bg-card: #1f1f1f;
+    --bg-hover: #252525;
+    --text-bright: #ffffff;
+    --text-muted: #afafaf;
+    --accent-blue: #267CB9;
+    --accent-green: #5fff5f;
+    --radius: 8px;
+    --transition: all 0.2s ease;
+}
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #28282f;
-}
-
-h1, h2, h3 {
-    color: white;
-}
-
-p, li {
+    background-color: var(--bg-main);
     color: lightgrey;
 }
 
-small {
-    color: #afafaf
-}
+h1, h2, h3, h4, h5, h6 { color: var(--text-bright); }
+p, li, em, strong { color: lightgrey; }
+small { color: var(--text-muted); }
 
 a {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 2px 4px;
+    margin: 0 -4px;
     font-weight: bold;
-    color: #267CB9;
-    transition: all 0.2s ease;
+    color: var(--accent-blue);
+    transition: var(--transition);
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    border-radius: 8px;
+    border-radius: var(--radius);
     background-color: #383838;
-    
 }
 
-header a:hover {
-    background-color: transparent;
-}
-
-header a {
-    color: whitesmoke;
-}
-
-code {
-    color: whitesmoke;
-    border-radius: 8px;
-    background-color: #000000;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
+header a { color: whitesmoke; }
+header a:hover { background-color: transparent; }
 
 section {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    
-    @media (min-width: 960px) {
-        width: 65%;
-    }
 }
 
-.highlight {
-    background-color: transparent;
+@media (min-width: 960px) {
+    section { width: 65%; }
 }
+
+blockquote {
+    border-left: 4px solid var(--text-muted);
+    border-radius: 4px 0 0 4px;
+    color: var(--text-muted);
+}
+
+code {
+    color: whitesmoke;
+    border-radius: var(--radius);
+    background-color: transparent;
+    padding: 2px 4px;
+}
+
+div.highlight { background-color: transparent; padding: 0; }
 
 pre.highlight {
-    background-color: #1f1f1f;
+    background-color: var(--bg-card);
     border: none;
     border-radius: 12px;
     .nt, .nn { color: #569cd6 !important; }
@@ -84,48 +83,60 @@ pre.highlight {
     .no, .nb { color: #4ec9b0 !important; }
     .k { color: #ff90d3 !important; }
     .nc { color: goldenrod !important; }
-    .n {color: #d800ff}
+    .n {color: #d800ee !important; }
 }
 
-pre code {
-    background-color: transparent;
+#posts-list {
     padding: 0;
+    margin: auto;
+    list-style-type: none;
 }
 
-::-webkit-scrollbar-track {
-    background-color: #1f1f1f;
+#posts-list li {
+    position: relative;
+    padding: 24px;
+    margin-bottom: 12px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    transition: var(--transition);
 }
 
+#posts-list li:hover {
+    background-color: var(--bg-hover);
+    transform: translateY(-2px);
+}
+
+#posts-list li a {
+    color: var(--accent-green);
+}
+
+#posts-list li a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--bg-card); }
 ::-webkit-scrollbar-thumb {
-    background-color: #303060;
+    background: #303060;
     border-radius: 8px;
-    border: 2px solid #1f1f1f;
-    transition: all 0.2s ease;
+    border: 3px solid var(--bg-card);
 }
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #383868;
-}
+::-webkit-scrollbar-thumb:hover { background: #383868; }
 
 #Top-button {
     font-size: 12px;
-    padding: 8px;
+    padding: 8px 16px;
     position: fixed;
-    bottom: 10px;
-    left: calc(50% + 257.79px);
-    background-color: #000000;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
     border-radius: 32px;
-    border: 1px solid #1f1f1f;
-    transition: all 0.2s ease;
+    border: 1px solid var(--bg-card);
     z-index: 10;
-
-    @media (max-width: 900px) {
-        left: 50%;
-    }
 }
 
 #Top-button:hover {
@@ -137,80 +148,4 @@ pre code {
 #Top-button:active {
     background-color: #0f0f0f;
     border: 1px solid #3a3a3a;
-}
-
-#posts-list {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#posts-list li {
-    position: relative;
-    padding: 24px;
-    margin-bottom: 12px;
-    background-color: #1f1f1f;
-    border-radius: 12px;
-    list-style-type: none;
-    transition: all 0.2s ease;
-}
-
-#posts-list li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #5fff5f;
-}
-
-#posts-list li span {
-    position: absolute;
-    right: 16px;
-   
-    @media (max-width: 400px) {
-        position: unset;
-        font-size: small;
-    }
-}
-
-#posts-list li a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-#posts-list li:hover {
-    background-color: #252525;
-    cursor: pointer;
-    padding: 23px
-}
-
-#posts-list li:hover a {
-    text-decoration: underline;
-    color: aquamarine;
-    font-size: 16px;
-}
-
-#posts-list li a:hover {
-    background-color: transparent;
-}
-
-#index {
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: left;
-    padding-left: 0;
-    gap: 10px;
-    top: 8px;
-    font-weight: bold;
-    list-style-type: none;
-}
-
-#index li a {
-    color: #267cb9;
 }
